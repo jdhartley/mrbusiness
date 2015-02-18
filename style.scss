@@ -1,6 +1,8 @@
 ---
 ---
 
+$color-orange: #ff851b;
+
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -75,6 +77,10 @@ header {
         margin-left: 16px;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     .fa {
         margin-right: 4px;
     }
@@ -85,9 +91,13 @@ h1 {
     line-height: 1;
     text-transform: uppercase;
 
+    a {
+        text-decoration: none;
+    }
+
     span {
         display: inline-block;
-        color: #FF851B;
+        color: $color-orange;
         margin-left: -.25em;
     }
 }
@@ -122,8 +132,12 @@ aside {
             width: 8px;
             height: 8px;
             margin: 0 16px 2px 6px;
-            background: #FF851B;
+            background: $color-orange;
         }
+    }
+
+    a {
+        text-decoration: none;
     }
 }
 
@@ -135,16 +149,30 @@ main {
         display: table;
         clear: both;
     }
+}
+
+input[type="text"], input[type="email"], textarea, button {
+    font-size: 16px;
+    padding: .5em;
+}
+textarea {
+    width: 400px;
+    resize: none;
+}
+
+figure {
+    margin: 0 0 1em;
 
     img {
-        border-top: 12px solid #FF851B;
+        border: 12px solid $color-orange;
     }
 
-    img + div {
-        background: #FF851B;
+    figcaption {
+        background: $color-orange;
         color: #fff;
-        text-align: right;
-        padding: 12px 6px 12px 0;
+        text-align: center;
+        padding: 0 0 12px;
+        font-style: italic;
     }
 }
 
@@ -156,4 +184,204 @@ footer {
     background: #efefef;
     text-align: center;
     padding: 20px;
+}
+
+// Word Cloud
+.wordcloud {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    width: 365px;
+    height: 310px;
+
+    > * {
+        display: inline-block;
+        position: absolute;
+        padding: .1em 0 .2em;
+        line-height: 1em;
+        text-decoration: none;
+        cursor: default;
+        white-space: nowrap;
+    }
+
+    :nth-child(1) {
+        font-size: 18px;
+        color: #636363;
+        left: 144px;
+        top: 129px;
+    }
+    :nth-child(2) {
+        font-size: 14px;
+        color: #848484;
+        left: 201px;
+        top: 147px;
+    }
+    :nth-child(3) {
+        font-size: 50px;
+        color: $color-orange;
+        left: 6px;
+        top: 74px;
+        font-weight: bold;
+        letter-spacing: -.05em;
+        text-decoration: underline;
+    }
+    :nth-child(4) {
+        font-size: 21px;
+        color: #212121;
+        left: 114px;
+        top: 161px;
+    }
+    :nth-child(5) {
+        font-size: 14px;
+        color: #636363;
+        left: 154px;
+        top: 147px;
+    }
+    :nth-child(6) {
+        font-size: 16px;
+        color: #424242;
+        left: 227px;
+        top: 131px;
+    }
+    :nth-child(7) {
+        font-size: 28px;
+        color: #848484;
+        left: 187px;
+        top: 181px;
+    }
+    :nth-child(8) {
+        font-size: 23px;
+        color: #212121;
+        left: 163px;
+        top: 55px;
+    }
+    :nth-child(9) {
+        font-size: 14px;
+        color: #636363;
+        left: 222px;
+        top: 161px;
+    }
+    :nth-child(10) {
+        font-size: 16px;
+        color: #636363;
+        left: 141px;
+        top: 209px;
+    }
+    :nth-child(11) {
+        font-size: 14px;
+        color: #424242;
+        left: 228px;
+        top: 147px;
+    }
+    :nth-child(12) {
+        font-size: 28px;
+        color: #000;
+        left: 75px;
+        top: 181px;
+    }
+    :nth-child(13) {
+        font-size: 26px;
+        color: #424242;
+        left: 176px;
+        top: 225px;
+    }
+    :nth-child(14) {
+        font-size: 21px;
+        color: #000;
+        left: 175px;
+        top: 34px;
+    }
+    :nth-child(15) {
+        font-size: 14px;
+        color: #636363;
+        left: 220px;
+        top: 209px;
+    }
+    :nth-child(16) {
+        font-size: 14px;
+        color: #212121;
+        left: 93px;
+        top: 147px;
+    }
+    :nth-child(17) {
+        font-size: 26px;
+        color: #636363;
+        left: 287px;
+        top: 121px;
+    }
+    :nth-child(18) {
+        font-size: 18px;
+        color: #212121;
+        left: 77px;
+        top: 129px;
+    }
+    :nth-child(19) {
+        font-size: 21px;
+        color: #000;
+        left: 106px;
+        top: 251px;
+    }
+    :nth-child(20) {
+        font-size: 18px;
+        color: #000;
+        left: 82px;
+        top: 61px;
+    }
+    :nth-child(21) {
+        font-size: 21px;
+        color: #424242;
+        left: 286px;
+        top: 100px;
+    }
+    :nth-child(22) {
+        font-size: 16px;
+        color: #636363;
+        left: 107px;
+        top: 226px;
+    }
+    :nth-child(23) {
+        font-size: 18px;
+        color: #424242;
+        left: 285px;
+        top: 82px;
+    }
+    :nth-child(24) {
+        font-size: 33px;
+        color: #212121;
+        left: 201px;
+        top: 0px;
+    }
+    :nth-child(25) {
+        font-size: 31px;
+        color: #000;
+        left: 183px;
+        top: 271px;
+    }
+    :nth-child(26) {
+        font-size: 16px;
+        color: #212121;
+        left: 131px;
+        top: 39px;
+    }
+    :nth-child(27) {
+        font-size: 26px;
+        color: #212121;
+        left: 92px;
+        top: 8px;
+    }
+}
+
+// Email banner
+.email-banner {
+    background: url(./email.jpg) no-repeat;
+    width: 408px;
+    height: 364px;
+    overflow: hidden;
+
+    img {
+        width: 163px;
+        margin-top: 120px;
+        margin-left: 13px;
+    }
 }
